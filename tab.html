@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.active{
+			color: red;
+			border-bottom: 1px solid red;
+		}
+		ul{
+			display: flex;
+		}
+		ul li{
+			list-style: none;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<ul>
+			<li v-for="(tab,index) in tabs" @click="change(index,tab.view)" :class="{active:active == index}">{{tab.type}}</li>
+		</ul>
+		<component :is="currentView"></component>
+	</div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+	<script>
+		Vue.component("child1",{template:'<p>hello child1</p>'})
+
+		Vue.component("child2",{template:'<p>hello child2</p>'})
+
+		new Vue({
+			el:'#root',
+			data: {
+				currentView: 'child1',
+				active: 0,
+				tabs: [{
+					id: 1,
+					type: 'child1 tab',
+					view: 'child1'
+				},{
+					id: 2,
+					type: 'child2 tab',
+					view: 'child2'
+				}]
+			},
+			methods: {
+				change(i,view) {
+					console.log(i)
+					console.log(view)
+					this.active=i;
+					this.currentView=view
+				}
+			}
+		})
+	</script>
+</body>
+</html>
