@@ -44,7 +44,7 @@
           <p class="large">鱼忘七秒</p><span></span>
           <div class="column">
             <p class="p1">鱼忘【Admin】</p>
-            <p class="p2">欢迎您登陆航家.点餐商户后台</p>
+            <p class="p2">欢迎您登陆航家·点餐商户后台</p>
           </div>
         </div>
         <div class="middle"></div>
@@ -162,6 +162,7 @@ export default {
   flex-direction: row;
   position: fixed;
   width: 100%;
+  z-index: 1000;
   background-color: #fff;
   box-shadow:4px 4px 6px #e0e0e0;
 }
