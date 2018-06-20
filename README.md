@@ -5,9 +5,7 @@
 
 
 ### Vue引入Element UI库
-[demo](https://smilecris.github.io/Vue-React/vue/)
 
 ### React引入Ant Design UI库
-[demo]()
 
 
