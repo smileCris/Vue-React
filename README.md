@@ -5,7 +5,9 @@
 
 
 ### Vue引入Element UI库
+[demo预览](http://47.106.186.50:8000)
 
 ### React引入Ant Design UI库
+[demo预览](http://47.106.186.50:8001)
 
 
